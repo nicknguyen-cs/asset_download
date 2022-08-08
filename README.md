@@ -11,3 +11,5 @@ tsc asset.export.ts
 node asset.export.js
 
 This is a quick PoC and will store a single folder down. Modifications can be made using the management SDK to build fully nested folders.
+
+**DISCLAIMER** Not production code ready, but an example and brute approach to downloading assets from Contentstack.
