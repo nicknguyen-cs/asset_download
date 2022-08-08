@@ -39,7 +39,6 @@ async function downloadAssets(target: string) {
                       const targetPath = `${target}/${folder.name}`;
                       const targetFile = `${target}/${folder.name}/${pathParts
                         .slice(pathParts.length -1)}`
-                      console.log(targetPath, targetFile);
                       fs.mkdirSync(targetPath, { recursive: true });
                       download(count, assetCount, asset.url, targetFile);
                       count++;
