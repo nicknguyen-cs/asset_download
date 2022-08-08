@@ -7,6 +7,7 @@ import { getContentstackClient, Stack } from "./stack";
 
 async function downloadAssets(target: string) {
   let count = 1;
+
   let managmentStack = getContentstackClient();
   Stack.Assets()
     .Query()
@@ -45,9 +46,11 @@ async function downloadAssets(target: string) {
                     });
                 });
             });
-          });
+          })
+          .catch((e) => { console.log(e) })
       }
-    });
+    })
+    .catch((e) => { console.log(e) })
 }
 
 const download = (
